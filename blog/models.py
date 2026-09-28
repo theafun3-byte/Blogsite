@@ -7,14 +7,14 @@ class Post(models.Model):
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PD', 'Published'
-    title = models.CharField(max_lenght=250)
-    slug = models.SlugField(max_lenght=250)
+    title = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                 related_name='blog_posts')
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_lenght=2,
+    status = models.CharField(max_length=2,
                                 choices=Status.choices,
                                 default=Status.DRAFT)
 

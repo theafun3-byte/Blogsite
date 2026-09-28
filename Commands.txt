@@ -1,1 +1,8 @@
 "Commands for Github" 
+
+blogsite\mysite
+
+git init
+git add .
+git commit -m " welcome to philippines"
+git push
